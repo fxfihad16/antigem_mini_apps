@@ -1,6 +1,6 @@
 # Signs changed apps and updates the catalog when apps/ changes on main.
 # Optional: needs two repository secrets (Settings → Secrets and variables → Actions):
-#   AGAPP_KEY       the contents of your .agkey file (the backup from AntiGem: Mini Apps → key icon → Back up)
+#   AGAPP_KEY       the contents of your .agkey file (the backup from Agent Hina: Mini Apps → key icon → Back up)
 #   AGAPP_PASSWORD  its password
 # Without them the job just stops; publish from your computer instead (see README.md).
 name: Publish mini apps
@@ -30,7 +30,7 @@ jobs:
           rm -f "$RUNNER_TEMP/dev.agkey"
       - name: Commit the packages
         run: |
-          git add dist antigem-mini-apps.json
+          git add dist hina-mini-apps.json
           if git diff --cached --quiet; then echo "Nothing new"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
