@@ -1,4 +1,4 @@
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = (s) => document.querySelector(s);
 const h = (tag, props = {}, ...kids) => {
   const el = document.createElement(tag);

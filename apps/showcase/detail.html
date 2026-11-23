@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Detail</title>
-  <link rel="stylesheet" href="/_antigem/ui.css">
+  <link rel="stylesheet" href="/_hina/ui.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
 
   <main class="ag-content">
     <div class="ag-card ag-card-primary hero ag-enter">
-      <div class="ag-caption">Opened with AntiGem.nav.push</div>
+      <div class="ag-caption">Opened with Hina.nav.push</div>
       <div class="ag-display" id="id-value">–</div>
       <div class="ag-body-s">params.id from the page's query string</div>
     </div>
@@ -39,7 +39,7 @@
     </div>
 
     <div class="ag-card ag-enter" style="animation-delay:80ms">
-      <h2 class="ag-card-title">AntiGem.page</h2>
+      <h2 class="ag-card-title">Hina.page</h2>
       <pre class="out" id="page-info"></pre>
     </div>
 
@@ -51,7 +51,7 @@
 </div>
 
 <script type="module">
-  const AG = window.AntiGem;
+  const AG = window.Hina;
   const id = Number(AG.page.params.id ?? 0);
 
   document.getElementById('id-value').textContent = `#${id}`;

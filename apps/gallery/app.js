@@ -84,7 +84,7 @@ $('#grant').addEventListener('click', async () => {
 });
 $('#refresh').addEventListener('click', () => { AG.device.haptic('light'); loadPhotos(); });
 
-// Camera: native capture, saved into Pictures/AntiGem
+// Camera: native capture, saved into Pictures/AgentHina
 $('#camera').addEventListener('click', async () => {
   if (await AG.permissions.request('camera') !== 'granted') { AG.ui.toast('Camera permission denied'); return; }
   $('#camera-input').click();
@@ -95,10 +95,10 @@ $('#camera-input').addEventListener('change', async (ev) => {
   if (!file) return;
   if (!(await canWrite('/sdcard/Pictures/x'))) { AG.ui.toast('Allow the Pictures folder to save photos'); return; }
   const name = `IMG_${new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14)}.jpg`;
-  await AG.fs.mkdir('/sdcard/Pictures/AntiGem');
-  await AG.fs.write('/sdcard/Pictures/AntiGem/' + name, file);
+  await AG.fs.mkdir('/sdcard/Pictures/AgentHina');
+  await AG.fs.write('/sdcard/Pictures/AgentHina/' + name, file);
   AG.device.haptic('success');
-  AG.ui.toast('Saved to Pictures/AntiGem');
+  AG.ui.toast('Saved to Pictures/AgentHina');
   loadPhotos();
 });
 
@@ -114,7 +114,7 @@ async function runStats() {
     const r = { images: 0, videos: 0, other: 0, bytes: 0, files: 0 };
     async function walk(p, depth) {
       let entries;
-      try { entries = await AntiGem.fs.list(p); } catch (e) { return; }
+      try { entries = await Hina.fs.list(p); } catch (e) { return; }
       for (const e of entries) {
         if (e.type === 'dir') { if (depth < 2 && !e.name.startsWith('.')) await walk(e.path, depth + 1); continue; }
         if (e.type !== 'file') continue;

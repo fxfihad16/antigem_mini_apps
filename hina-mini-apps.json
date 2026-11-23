@@ -1,21 +1,21 @@
 {
-  "name": "AntiGem mini apps",
+  "name": "Agent Hina mini apps",
   "format": 1,
-  "generated": "2026-11-16T11:18:45.017Z",
+  "generated": "2026-11-23T12:31:12.289Z",
   "apps": [
     {
       "path": "apps/agy-accounts",
-      "id": "com.antigem.agyaccounts",
+      "id": "io.hina.agyaccounts",
       "name": "Agy Accounts",
       "version": "1.0.0",
       "version_code": 1000000,
       "description": "Save your Antigravity (agy) logins and switch between them.",
       "icon": "apps/agy-accounts/icon.png",
-      "package": "dist/com.antigem.agyaccounts-1.0.0.agapp",
-      "sha256": "f36560664bdbcbcd2a1ca3429db2b8532740998e33ad9d27c2441ad38cd22078",
-      "size": 10146,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.agyaccounts-1.0.0.agapp",
+      "sha256": "ea92434a11f13228cfb7ee08001169a731ded2674b0ddf34ccde3a98855738fb",
+      "size": 10135,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "storage": {
           "folders": [
@@ -26,21 +26,21 @@
           ]
         }
       },
-      "updated": "2026-11-16T11:18:44.925Z"
+      "updated": "2026-11-23T12:31:12.121Z"
     },
     {
       "path": "apps/devtools",
-      "id": "com.antigem.devtools",
+      "id": "io.hina.devtools",
       "name": "Dev Toolbox",
       "version": "1.0.0",
       "version_code": 1000000,
-      "description": "HTTP client, WebSocket tester, encoders and hashes, and AntiGem MCP tools in one place.",
+      "description": "HTTP client, WebSocket tester, encoders and hashes, and Agent Hina MCP tools in one place.",
       "icon": "apps/devtools/icon.png",
-      "package": "dist/com.antigem.devtools-1.0.0.agapp",
-      "sha256": "f6c2e2552a7ba0a12131d1e24f73df2d575175b69736613f0979a5a7ba012003",
-      "size": 15127,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.devtools-1.0.0.agapp",
+      "sha256": "fc40a87874d29228cf7e7b8f711d7dc3887fba51168a489c1e5ab08c5fdeb87b",
+      "size": 15208,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "network": {
           "hosts": [
@@ -63,21 +63,21 @@
           }
         }
       },
-      "updated": "2026-11-12T07:27:37.514Z"
+      "updated": "2026-11-23T12:31:12.160Z"
     },
     {
       "path": "apps/explorer",
-      "id": "com.antigem.explorer",
+      "id": "io.hina.explorer",
       "name": "Explorer",
       "version": "1.0.0",
       "version_code": 1000000,
-      "description": "Wikipedia, dictionary, currency rates, countries and Hacker News: free APIs, no keys, through AntiGem's native network.",
+      "description": "Wikipedia, dictionary, currency rates, countries and Hacker News: free APIs, no keys, through Agent Hina's native network.",
       "icon": "apps/explorer/icon.png",
-      "package": "dist/com.antigem.explorer-1.0.0.agapp",
-      "sha256": "dd6a08e02cdc85de0f24d4cfd976502f68049cd4d72f3b6dbef2b97a194d7eab",
-      "size": 21263,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.explorer-1.0.0.agapp",
+      "sha256": "6e7724c8b63d29aa8b3e549d883c88bea374bc14d156a6dba06826ccbe624a0b",
+      "size": 21297,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "network": {
           "hosts": [
@@ -95,40 +95,40 @@
         "notifications": true,
         "background": true
       },
-      "updated": "2026-11-12T07:27:37.526Z"
+      "updated": "2026-11-23T12:31:12.176Z"
     },
     {
       "path": "apps/focus",
-      "id": "com.antigem.focus",
+      "id": "io.hina.focus",
       "name": "Focus",
       "version": "1.0.0",
       "version_code": 1000000,
       "description": "Pomodoro focus timer: a live countdown notification with Pause and Skip, tasks, history, streaks and reminders that fire even when the app is closed.",
       "icon": "apps/focus/icon.png",
-      "package": "dist/com.antigem.focus-1.0.0.agapp",
-      "sha256": "4f16e0d5f6f546a487d4404df55ec5b7303080e970c8aec5bde63ec81d945753",
-      "size": 21852,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.focus-1.0.0.agapp",
+      "sha256": "5916cc8970359c5728282103553a9cc421f008a57f7e6975879fe9b746be5535",
+      "size": 21911,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "notifications": true,
         "background": true
       },
-      "updated": "2026-11-12T07:27:37.530Z"
+      "updated": "2026-11-23T12:31:12.198Z"
     },
     {
       "path": "apps/gallery",
-      "id": "com.antigem.gallery",
+      "id": "io.hina.gallery",
       "name": "Gallery",
       "version": "1.0.0",
       "version_code": 1000000,
       "description": "Browse photos and videos on your phone. Native file access per folder, thumbnails streamed natively.",
       "icon": "apps/gallery/icon.png",
-      "package": "dist/com.antigem.gallery-1.0.0.agapp",
-      "sha256": "697cb3adc0ccac0957ecc0a78369bfefb01e6108f96bd18dd715ba003a34e52b",
-      "size": 12807,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.gallery-1.0.0.agapp",
+      "sha256": "83525f4ab557cc22d0422c066033fc77fa78cbfa8b5cb0c6d0b0e982fe2bb3d5",
+      "size": 12860,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "storage": {
           "folders": [
@@ -145,39 +145,39 @@
         },
         "camera": true
       },
-      "updated": "2026-11-12T07:27:37.534Z"
+      "updated": "2026-11-23T12:31:12.220Z"
     },
     {
       "path": "apps/habits",
-      "id": "com.antigem.habits",
+      "id": "io.hina.habits",
       "name": "Habits",
       "version": "1.0.0",
       "version_code": 1000000,
       "description": "Daily habit tracker with streaks, a 4-week history and a daily reminder.",
       "icon": "apps/habits/icon.png",
-      "package": "dist/com.antigem.habits-1.0.0.agapp",
-      "sha256": "088e543fca932cbf32a006fb5e02f87b5e48ed35fcf0ad38b377049f5dff5891",
-      "size": 15758,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.habits-1.0.0.agapp",
+      "sha256": "87e7b248398c6d019fc60d7113319c6d8af5ef85048165e5a5feb46edd26d890",
+      "size": 15830,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "notifications": true
       },
-      "updated": "2026-11-12T07:27:37.538Z"
+      "updated": "2026-11-23T12:31:12.246Z"
     },
     {
       "path": "apps/notes",
-      "id": "com.antigem.notes",
+      "id": "io.hina.notes",
       "name": "Pocket Notes",
       "version": "1.0.0",
       "version_code": 1000000,
       "description": "Quick markdown notes with pins, reminders, search, sharing and export to your Documents folder.",
       "icon": "apps/notes/icon.png",
-      "package": "dist/com.antigem.notes-1.0.0.agapp",
-      "sha256": "4d9a41ec9e1e930951cebb9629cbda9d265070da51dd5e0f94e74dad931a5f68",
-      "size": 16263,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.notes-1.0.0.agapp",
+      "sha256": "d68a70ee8422d7ec596f880417711f34e07c14a77de81db1f77e312b56b8e3c5",
+      "size": 16309,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "notifications": true,
         "clipboard": true,
@@ -190,21 +190,21 @@
           ]
         }
       },
-      "updated": "2026-11-12T07:27:37.541Z"
+      "updated": "2026-11-23T12:31:12.262Z"
     },
     {
       "path": "apps/showcase",
-      "id": "com.antigem.showcase",
+      "id": "io.hina.showcase",
       "name": "Showcase",
       "version": "1.0.0",
       "version_code": 1000000,
       "description": "Tries every Mini Apps feature: native storage, IndexedDB, files, network, cookies, native UI, notifications, reminders, background tasks, threads, permissions, theme and console.",
       "icon": "apps/showcase/icon.png",
-      "package": "dist/com.antigem.showcase-1.0.0.agapp",
-      "sha256": "54acce9a6690f94f2af955f97ee2b5d77e71e5ccc2999e2ce92f006a1cb5213f",
-      "size": 25796,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.showcase-1.0.0.agapp",
+      "sha256": "577906e880e5fb422dc6d76ab1fae00d821840642ab65568a91231226e5eca88",
+      "size": 25898,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "network": {
           "hosts": [
@@ -242,21 +242,21 @@
           "notes_mcp": "read"
         }
       },
-      "updated": "2026-11-12T07:27:37.549Z"
+      "updated": "2026-11-23T12:31:12.279Z"
     },
     {
       "path": "apps/weather",
-      "id": "com.antigem.weather",
+      "id": "io.hina.weather",
       "name": "Sky",
       "version": "1.0.0",
       "version_code": 1000000,
       "description": "Weather forecast with hourly chart, 7 days, rain alerts in the background and a morning reminder.",
       "icon": "apps/weather/icon.png",
-      "package": "dist/com.antigem.weather-1.0.0.agapp",
-      "sha256": "56969477f75c9d2cfd31e01ac2b103d44570690c8f231e9faea5cc8028e4839a",
-      "size": 13590,
-      "developer": "Santosh Kurmi",
-      "fingerprint": "57b8a7a0466f5dda67b1082e15305d5e3f3156e10ee9e9d0f7af6a505af53bed",
+      "package": "dist/io.hina.weather-1.0.0.agapp",
+      "sha256": "d4bce5ee04f3cbd4e974e3f50de3031fe29939aece0b4dc6461b3c45854a2642",
+      "size": 13635,
+      "developer": "Agent Hina",
+      "fingerprint": "292f3976f87f18207d5d9ae677434897390304aa19e0f633ad06318e22da0de9",
       "permissions": {
         "network": {
           "hosts": [
@@ -267,7 +267,7 @@
         "notifications": true,
         "background": true
       },
-      "updated": "2026-11-12T07:27:37.552Z"
+      "updated": "2026-11-23T12:31:12.287Z"
     }
   ]
 }

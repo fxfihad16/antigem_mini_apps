@@ -1,4 +1,4 @@
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = s => document.querySelector(s);
 const MODES = {
   focus: { label: 'Focus', color: '#C62828', key: 'focusMin', def: 25 },

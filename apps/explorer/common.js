@@ -1,5 +1,5 @@
 // Shared helpers for Explorer's pages.
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = (sel, root = document) => root.querySelector(sel);
 
 /** Tiny element builder: h('li', {class: 'x', onclick}, child, ...) */
@@ -19,7 +19,7 @@ function h(tag, props = {}, ...children) {
 const spinner = () => h('div', { class: 'loading' }, h('div', { class: 'ag-spinner' }));
 const empty = (icon, title, sub) => h('div', { class: 'ag-empty' }, h('div', { class: 'ag-empty-icon' }, icon), h('div', { class: 'ag-empty-title' }, title), sub ? h('p', {}, sub) : null);
 
-/** fetch → JSON, with a readable error (all of it goes through AntiGem's native network). */
+/** fetch → JSON, with a readable error (all of it goes through Agent Hina's native network). */
 async function getJSON(url, opts) {
   const r = await fetch(url, opts);
   if (!r.ok) {

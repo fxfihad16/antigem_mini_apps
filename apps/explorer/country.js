@@ -1,4 +1,4 @@
-/* A country, opened with AntiGem.nav.push('country.html', {code}). Data comes from the list page's saved copy;
+/* A country, opened with Hina.nav.push('country.html', {code}). Data comes from the list page's saved copy;
    cities and the Wikipedia summary are fetched here. */
 const code = (AG.page.params.code || '').toUpperCase();
 const all = JSON.parse(localStorage.getItem('countries.v1') || 'null')?.list || [];

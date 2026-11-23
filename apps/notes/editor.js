@@ -1,5 +1,5 @@
-// Pocket Notes: the editor page (opened with AntiGem.nav.push('editor.html', {id})).
-const AG = window.AntiGem;
+// Pocket Notes: the editor page (opened with Hina.nav.push('editor.html', {id})).
+const AG = window.Hina;
 const $ = s => document.querySelector(s);
 const text = $('#text');
 let note = { text: '', images: [] };

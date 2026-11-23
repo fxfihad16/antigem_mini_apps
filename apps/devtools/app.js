@@ -1,5 +1,5 @@
 'use strict';
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
 
@@ -37,7 +37,7 @@ function showTab(name) {
   $$('.ag-navbar-item').forEach((b) => b.classList.toggle('is-active', b.dataset.tab === name));
   $('#title').textContent = $(`.tab[data-tab="${name}"]`).dataset.title;
   sessionStorage.setItem('tab', name);
-  if (name === 'antigem') renderAntiGem();
+  if (name === 'hina') renderHina();
 }
 $$('.ag-navbar-item').forEach((b) => b.addEventListener('click', () => { AG.device.haptic('selection'); showTab(b.dataset.tab); }));
 AG.onBack(() => { if (tab !== 'http') { showTab('http'); return true; } return false; });
@@ -223,7 +223,7 @@ $('#t-swap').addEventListener('click', () => { if (!$('#t-out').hidden) $('#t-in
 
 // Runs on another CPU core: it gets only its arguments (copied as source code), so it reads the file itself.
 const hashFileOnThread = async (path) => {
-  const b64 = await AntiGem.fs.read(path, { encoding: 'base64' });
+  const b64 = await Hina.fs.read(path, { encoding: 'base64' });
   const bin = atob(b64);
   const bytes = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
@@ -242,7 +242,7 @@ action('t-file', async () => {
   return `${f.name}\n${r.size.toLocaleString()} bytes · ${r.ms} ms\nSHA-256: ${r.sha256}`;
 }, 't-file-out');
 
-/* ============================ AntiGem ============================ */
+/* ============================ Agent Hina ============================ */
 action('m-list', async () => {
   const tools = await AG.mcp.list('notes_mcp');
   $('#m-tools').replaceChildren(...tools.map((t) => h('li', { class: 'ag-item ag-clickable', onclick: () => {
@@ -271,7 +271,7 @@ function renderTheme() {
   const colors = (AG.theme && AG.theme.colors) || {};
   $('#th-swatches').replaceChildren(...Object.entries(colors).slice(0, 24).map(([k, v]) => h('div', { class: 'swatch', style: `background:${v}` }, `${k}\n${v}`)));
 }
-async function renderAntiGem() {
+async function renderHina() {
   renderPermissions();
   renderTheme();
   try { show('d-out', { ...(await AG.device.info()), app: AG.app, cores: AG.thread.cores }); } catch (e) { show('d-out', errText(e), 'err'); }

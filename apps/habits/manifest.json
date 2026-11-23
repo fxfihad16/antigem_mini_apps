@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "id": "com.antigem.habits",
+  "id": "io.hina.habits",
   "name": "Habits",
   "version": "1.0.0",
   "description": "Daily habit tracker with streaks, a 4-week history and a daily reminder.",

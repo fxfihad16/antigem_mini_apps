@@ -1,5 +1,5 @@
 // Pocket Notes: the list page.
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = s => document.querySelector(s);
 let notes = [];
 let filter = 'all';

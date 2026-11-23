@@ -1,6 +1,6 @@
-// Habits: a daily habit tracker. State lives in AntiGem.storage (native, synchronous JSON).
+// Habits: a daily habit tracker. State lives in Hina.storage (native, synchronous JSON).
 
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = sel => document.querySelector(sel);
 const $$ = sel => [...document.querySelectorAll(sel)];
 

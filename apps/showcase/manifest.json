@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "id": "com.antigem.showcase",
+  "id": "io.hina.showcase",
   "name": "Showcase",
   "version": "1.0.0",
   "description": "Tries every Mini Apps feature: native storage, IndexedDB, files, network, cookies, native UI, notifications, reminders, background tasks, threads, permissions, theme and console.",

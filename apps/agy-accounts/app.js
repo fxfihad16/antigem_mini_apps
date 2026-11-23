@@ -2,10 +2,10 @@
 //
 // agy (Antigravity) keeps its Google login in ~/.gemini/jetski-standalone-oauth-token (on Termux there is no keyring,
 // so this file is the only copy). agy notices when the file changes or disappears and loads the new login the next
-// time AntiGem asks for the sign-in status, so switching is: save the current file, write another saved one in its
-// place, refresh AntiGem. Signing in itself always happens in AntiGem; this app only copies files.
+// time Agent Hina asks for the sign-in status, so switching is: save the current file, write another saved one in its
+// place, refresh Agent Hina. Signing in itself always happens in Agent Hina; this app only copies files.
 
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = (sel) => document.querySelector(sel);
 
 const LIVE = '~/.gemini/jetski-standalone-oauth-token';
@@ -130,7 +130,7 @@ async function keepCurrent(action) {
   if (choice !== 'drop') return false;
   return AG.ui.confirm({
     title: `Lose ${name}?`,
-    message: 'This login will be gone from this phone. To use it again you will have to sign in again in AntiGem.',
+    message: 'This login will be gone from this phone. To use it again you will have to sign in again in Agent Hina.',
     ok: action,
     destructive: true,
   });
@@ -152,7 +152,7 @@ async function addAccount() {
   }
   await AG.ui.alert({
     title: 'Sign in with the other account',
-    message: 'Open AntiGem and refresh: it will show that you are signed out. Sign in there with the other Google '
+    message: 'Open Agent Hina and refresh: it will show that you are signed out. Sign in there with the other Google '
       + 'account, then come back here and tap “Save this account”.',
     ok: 'Got it',
   });
@@ -164,14 +164,14 @@ async function signOut() {
   if (liveSaved()) {
     const ok = await AG.ui.confirm({
       title: `Sign out of ${name}?`,
-      message: 'agy will be signed out after AntiGem refreshes. The saved copy stays here, so you can switch back to it any time.',
+      message: 'agy will be signed out after Agent Hina refreshes. The saved copy stays here, so you can switch back to it any time.',
       ok: 'Sign out',
     });
     if (!ok) return;
   } else if (!(await keepCurrent('Sign out'))) return;
   await removeLive();
   AG.device.haptic('medium');
-  AG.ui.toast('Signed out. Refresh AntiGem.', { long: true });
+  AG.ui.toast('Signed out. Refresh Agent Hina.', { long: true });
 }
 
 async function switchTo(acc) {
@@ -181,7 +181,7 @@ async function switchTo(acc) {
   }
   const ok = await AG.ui.confirm({
     title: `Switch to ${acc.name}?`,
-    message: 'agy will use this account after AntiGem refreshes. A reply that is running right now may stop.',
+    message: 'agy will use this account after Agent Hina refreshes. A reply that is running right now may stop.',
     ok: 'Switch',
   });
   if (!ok || !(await keepCurrent('Switch'))) return;
@@ -190,7 +190,7 @@ async function switchTo(acc) {
   AG.device.haptic('success');
   await AG.ui.alert({
     title: `Switched to ${acc.name}`,
-    message: 'Now refresh in AntiGem so agy picks up this account.',
+    message: 'Now refresh in Agent Hina so agy picks up this account.',
     ok: 'OK',
   });
 }
@@ -200,7 +200,7 @@ async function deleteSaved(acc) {
     title: `Delete the saved copy of ${acc.name}?`,
     message: isActive(acc)
       ? 'It is signed in right now and stays signed in; only the saved copy here is deleted.'
-      : 'You will have to sign in again in AntiGem to use this account later.',
+      : 'You will have to sign in again in Agent Hina to use this account later.',
     ok: 'Delete',
     destructive: true,
   });
@@ -250,7 +250,7 @@ function renderNotice() {
   if (live.status === 'error') {
     const e = live.error || {};
     notice.hidden = false;
-    $('#notice-title').textContent = e.name === 'NotAllowedError' ? 'AntiGem blocked the login file' : 'Can’t read agy’s login file';
+    $('#notice-title').textContent = e.name === 'NotAllowedError' ? 'Agent Hina blocked the login file' : 'Can’t read agy’s login file';
     $('#notice-text').textContent = e.message || String(e);
   } else {
     notice.hidden = true;
@@ -281,7 +281,7 @@ function renderCurrent() {
   } else if (live.status === 'none') {
     $('#cur-avatar').textContent = '–';
     $('#cur-email').textContent = 'Not signed in';
-    $('#cur-kind').textContent = saved.length ? 'Sign in in AntiGem, or switch to a saved account below.' : 'Sign in in AntiGem, then come back here.';
+    $('#cur-kind').textContent = saved.length ? 'Sign in in Agent Hina, or switch to a saved account below.' : 'Sign in in Agent Hina, then come back here.';
   } else if (live.status === 'error') {
     $('#cur-avatar').textContent = '!';
     $('#cur-email').textContent = 'Unknown';
@@ -340,7 +340,7 @@ async function refresh() {
 $('#refresh').addEventListener('click', () => { AG.device.haptic('light'); run(async () => {}); });
 $('#add').addEventListener('click', () => run(addAccount));
 $('#notice-btn').addEventListener('click', () => run(() => AG.permissions.request('storage')));
-AG.on('resume', () => { if (!busy) refresh(); });          // back from AntiGem after signing in or refreshing
+AG.on('resume', () => { if (!busy) refresh(); });          // back from Agent Hina after signing in or refreshing
 AG.on('permission', () => { if (!busy) refresh(); });
 
 refresh();

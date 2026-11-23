@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "id": "com.antigem.gallery",
+  "id": "io.hina.gallery",
   "name": "Gallery",
   "version": "1.0.0",
   "description": "Browse photos and videos on your phone. Native file access per folder, thumbnails streamed natively.",

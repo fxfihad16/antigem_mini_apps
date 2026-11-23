@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "id": "com.antigem.notes",
+  "id": "io.hina.notes",
   "name": "Pocket Notes",
   "version": "1.0.0",
   "description": "Quick markdown notes with pins, reminders, search, sharing and export to your Documents folder.",

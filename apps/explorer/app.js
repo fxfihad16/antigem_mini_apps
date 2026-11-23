@@ -1,4 +1,4 @@
-/* Explorer: free, keyless APIs, all fetched natively by AntiGem (no CORS, permission-checked hosts). */
+/* Explorer: free, keyless APIs, all fetched natively by Agent Hina (no CORS, permission-checked hosts). */
 
 /* =========================== Tabs =========================== */
 
@@ -322,7 +322,7 @@ async function loadCountries(force = false) {
 
 async function filterCountries() {
   const q = $('#c-q').value.trim();
-  // filtering and sorting run on another CPU core (AntiGem.thread): the function is copied there as source
+  // filtering and sorting run on another CPU core (Hina.thread): the function is copied there as source
   const list = await AG.thread.run((all, q, sort) => {
     q = q.toLowerCase();
     const r = all.filter(c => !q || c.name.toLowerCase().includes(q) || c.capital.toLowerCase().includes(q) || c.currency.toLowerCase() === q || c.iso2.toLowerCase() === q);

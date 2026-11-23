@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "id": "com.antigem.weather",
+  "id": "io.hina.weather",
   "name": "Sky",
   "version": "1.0.0",
   "description": "Weather forecast with hourly chart, 7 days, rain alerts in the background and a morning reminder.",

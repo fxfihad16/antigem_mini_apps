@@ -1,5 +1,5 @@
 // Shared by index.html and viewer.html
-const AG = window.AntiGem;
+const AG = window.Hina;
 const IMG = /\.(jpe?g|png|gif|webp|heic|heif|avif|bmp)$/i;
 const VID = /\.(mp4|webm|mov|m4v|3gp|mkv)$/i;
 const isMedia = (n) => IMG.test(n) || VID.test(n);

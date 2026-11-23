@@ -2,7 +2,7 @@
 // Running: the system ticks the countdown itself, in the mode's color, with Pause / Skip buttons.
 // Paused: time left, with Resume / Stop. The buttons work with the app closed (background script).
 (function () {
-  const AG = window.AntiGem;
+  const AG = window.Hina;
   const MODES = {
     focus: { label: 'Focus', color: '#C62828', key: 'focusMin' },
     short: { label: 'Short break', color: '#2E7D32', key: 'shortMin' },

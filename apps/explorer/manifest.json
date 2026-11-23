@@ -1,9 +1,9 @@
 {
   "manifest_version": 1,
-  "id": "com.antigem.explorer",
+  "id": "io.hina.explorer",
   "name": "Explorer",
   "version": "1.0.0",
-  "description": "Wikipedia, dictionary, currency rates, countries and Hacker News: free APIs, no keys, through AntiGem's native network.",
+  "description": "Wikipedia, dictionary, currency rates, countries and Hacker News: free APIs, no keys, through Agent Hina's native network.",
   "entry": "index.html",
   "icon": "icon.png",
   "theme_color": "#00695C",

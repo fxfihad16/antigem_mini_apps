@@ -1,9 +1,9 @@
 {
   "manifest_version": 1,
-  "id": "com.antigem.devtools",
+  "id": "io.hina.devtools",
   "name": "Dev Toolbox",
   "version": "1.0.0",
-  "description": "HTTP client, WebSocket tester, encoders and hashes, and AntiGem MCP tools in one place.",
+  "description": "HTTP client, WebSocket tester, encoders and hashes, and Agent Hina MCP tools in one place.",
   "entry": "index.html",
   "icon": "icon.png",
   "theme_color": "#263238",

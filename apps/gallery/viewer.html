@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Viewer</title>
-  <link rel="stylesheet" href="/_antigem/ui.css">
+  <link rel="stylesheet" href="/_hina/ui.css">
   <style>
     html, body { margin: 0; height: 100%; background: #000; color: #fff; overflow: hidden; }
     #stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; touch-action: pan-y; }
@@ -80,11 +80,11 @@
     document.getElementById('copy').onclick = async () => {
       try {
         const blob = await (await fetch(AG.fs.url(path))).blob();
-        await AG.fs.mkdir('/sdcard/Pictures/AntiGem');
+        await AG.fs.mkdir('/sdcard/Pictures/AgentHina');
         const name = path.split('/').pop().replace(/(\.[^.]+)$/, '_copy$1');
-        await AG.fs.write('/sdcard/Pictures/AntiGem/' + name, blob);
+        await AG.fs.write('/sdcard/Pictures/AgentHina/' + name, blob);
         AG.device.haptic('success');
-        AG.ui.toast('Saved to Pictures/AntiGem');
+        AG.ui.toast('Saved to Pictures/AgentHina');
       } catch (e) { AG.ui.toast(e.message); }
     };
     document.getElementById('delete').onclick = async () => {

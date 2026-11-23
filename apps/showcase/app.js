@@ -1,6 +1,6 @@
 // Showcase: tries every Mini Apps runtime feature and shows the result (or the error) under each button.
 
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
@@ -50,8 +50,8 @@ function action(id, handler, outId) {
 
 if (!AG) {
   document.body.prepend(h('div', { class: 'ag-card ag-card-primary', style: 'margin:16px' },
-    'Open this app inside AntiGem → Mini Apps to use the native APIs.'));
-  throw new Error('AntiGem runtime not found');
+    'Open this app inside Agent Hina → Mini Apps to use the native APIs.'));
+  throw new Error('Agent Hina runtime not found');
 }
 
 /* =========================== Tabs & back =========================== */
@@ -137,7 +137,7 @@ $('#counter-inc').addEventListener('click', () => changeCounter(1));
 $('#counter-dec').addEventListener('click', () => changeCounter(-1));
 $('#counter-reset').addEventListener('click', () => changeCounter(null));
 
-// AntiGem.storage key-value
+// Hina.storage key-value
 action('kv-save', () => {
   const name = $('#kv-name').value.trim();
   AG.storage.set('profile', { name, savedAt: new Date().toISOString() });
@@ -314,7 +314,7 @@ action('dl-list', async () => {
 }, 'dl-out');
 action('dl-request', async () => `storage: ${await AG.permissions.request('storage')}`, 'dl-out');
 
-// a folder the user chooses in AntiGem's file explorer (the manifest allows it with "pick": "read")
+// a folder the user chooses in Agent Hina's file explorer (the manifest allows it with "pick": "read")
 action('pick-folder', async () => {
   const picked = await AG.fs.pickFolder();
   if (!picked) return 'Cancelled';
@@ -345,7 +345,7 @@ action('net-post', async () => {
 
 action('net-headers', async () => {
   const res = await fetch('https://httpbin.org/headers', {
-    headers: { Origin: 'https://example.org', 'User-Agent': 'AntiGemShowcase/1.0', 'X-Mini-App': 'showcase' },
+    headers: { Origin: 'https://example.org', 'User-Agent': 'AgentHinaShowcase/1.0', 'X-Mini-App': 'showcase' },
   });
   const { headers } = await res.json();
   return { Origin: headers.Origin, 'User-Agent': headers['User-Agent'], 'X-Mini-App': headers['X-Mini-App'] };
@@ -426,15 +426,15 @@ action('web-prompt', () => `prompt() → ${JSON.stringify(prompt('What should we
 
 action('ui-alert', async () => {
   await AG.ui.alert({ title: 'Native alert', message: 'Async and themed. The promise resolves when it closes.', ok: 'Got it' });
-  return 'AntiGem.ui.alert closed';
+  return 'Hina.ui.alert closed';
 }, 'ui-dialog-out');
 action('ui-confirm', async () => {
   const yes = await AG.ui.confirm({ title: 'Delete everything?', message: 'This confirm uses a destructive button.', ok: 'Delete', cancel: 'Keep', destructive: true });
-  return `AntiGem.ui.confirm → ${yes}`;
+  return `Hina.ui.confirm → ${yes}`;
 }, 'ui-dialog-out');
 action('ui-prompt', async () => {
   const name = await AG.ui.prompt({ title: 'Rename', message: 'Give this app a nickname.', value: 'Showcase', placeholder: 'Nickname' });
-  return `AntiGem.ui.prompt → ${JSON.stringify(name)}`;
+  return `Hina.ui.prompt → ${JSON.stringify(name)}`;
 }, 'ui-dialog-out');
 action('ui-sheet', async () => {
   const id = await AG.ui.sheet({
@@ -446,7 +446,7 @@ action('ui-sheet', async () => {
       { id: 'delete', label: 'Delete', icon: '🗑️', destructive: true },
     ],
   });
-  return `AntiGem.ui.sheet → ${JSON.stringify(id)}`;
+  return `Hina.ui.sheet → ${JSON.stringify(id)}`;
 }, 'ui-dialog-out');
 
 let pickedDate, pickedTime;
@@ -471,7 +471,7 @@ action('dev-copy', async () => {
 }, 'clip-out');
 action('dev-paste', async () => `Clipboard: ${JSON.stringify(await AG.device.paste())}`, 'clip-out');
 action('dev-share', async () => {
-  await AG.device.share({ title: 'AntiGem Showcase', text: 'Built with AntiGem Mini Apps ✨' });
+  await AG.device.share({ title: 'Agent Hina Showcase', text: 'Built with Agent Hina Mini Apps ✨' });
   return 'Share sheet opened';
 }, 'clip-out');
 
@@ -488,7 +488,7 @@ action('notify-cancel', async () => {
   return 'Scheduled notification cancelled';
 }, 'notify-out');
 
-// <input type=file> (native picker) and AntiGem.fs.pick
+// <input type=file> (native picker) and Hina.fs.pick
 $('#file-input-btn').addEventListener('click', () => $('#file-input').click());
 $('#file-input').addEventListener('change', event => {
   const file = event.target.files[0];
@@ -542,7 +542,7 @@ const stateBadge = { granted: 'ag-badge-success', denied: '', prompt: 'ag-badge-
 function renderPermissions() {
   const all = AG.permissions.all();
   $('#perm-list').replaceChildren(...Object.entries(all).map(([name, state]) => {
-    const [icon, about] = permissionInfo[name] ?? ['🧩', name.startsWith('mcp:') ? `AntiGem tool server ${name.slice(4)}` : ''];
+    const [icon, about] = permissionInfo[name] ?? ['🧩', name.startsWith('mcp:') ? `Agent Hina tool server ${name.slice(4)}` : ''];
     return h('li', { class: 'ag-item' },
       h('span', { class: 'ag-item-lead' }, icon),
       h('span', { class: 'ag-item-body' },

@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "id": "com.antigem.agyaccounts",
+  "id": "io.hina.agyaccounts",
   "name": "Agy Accounts",
   "version": "1.0.0",
   "description": "Save your Antigravity (agy) logins and switch between them.",

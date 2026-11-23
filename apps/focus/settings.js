@@ -1,4 +1,4 @@
-const AG = window.AntiGem;
+const AG = window.Hina;
 const $ = s => document.querySelector(s);
 const defaults = { focusMin: 25, shortMin: 5, longMin: 15, goal: 8, sound: true, longEvery: 4 };
 const get = () => Object.assign({}, defaults, AG.storage.get('settings', {}));

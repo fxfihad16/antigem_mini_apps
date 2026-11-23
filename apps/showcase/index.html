@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Showcase</title>
-  <link rel="stylesheet" href="/_antigem/ui.css">
+  <link rel="stylesheet" href="/_hina/ui.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -46,7 +46,7 @@
         <div class="card-head">
           <span class="card-icon">🗝️</span>
           <div class="ag-grow">
-            <h2 class="ag-card-title">AntiGem.storage</h2>
+            <h2 class="ag-card-title">Hina.storage</h2>
             <p class="ag-card-sub">Synchronous key-value store with JSON values.</p>
           </div>
         </div>
@@ -107,7 +107,7 @@
           <span class="card-icon">📂</span>
           <div class="ag-grow">
             <h2 class="ag-card-title">Folders outside the app</h2>
-            <p class="ag-card-sub">Each folder is its own permission with the access the manifest gives it (Download: read only). You can also pick any folder in AntiGem's file explorer.</p>
+            <p class="ag-card-sub">Each folder is its own permission with the access the manifest gives it (Download: read only). You can also pick any folder in Agent Hina's file explorer.</p>
           </div>
         </div>
         <div class="ag-card-actions" style="flex-wrap:wrap">
@@ -235,7 +235,7 @@
       </div>
 
       <div class="ag-card">
-        <h2 class="ag-card-title">AntiGem.ui dialogs</h2>
+        <h2 class="ag-card-title">Hina.ui dialogs</h2>
         <p class="ag-card-sub">Async, themed, with titles and destructive actions.</p>
         <div class="ag-row">
           <button class="ag-btn" id="ui-alert">Alert</button>
@@ -290,10 +290,10 @@
 
       <div class="ag-card">
         <h2 class="ag-card-title">Files &amp; images</h2>
-        <p class="ag-card-sub"><code>&lt;input type=file&gt;</code> and <code>AntiGem.fs.pick</code> both open the native picker.</p>
+        <p class="ag-card-sub"><code>&lt;input type=file&gt;</code> and <code>Hina.fs.pick</code> both open the native picker.</p>
         <div class="ag-row">
           <button class="ag-btn ag-btn-tonal" id="file-input-btn">input type=file</button>
-          <button class="ag-btn ag-btn-tonal" id="fs-pick">AntiGem.fs.pick</button>
+          <button class="ag-btn ag-btn-tonal" id="fs-pick">Hina.fs.pick</button>
           <input type="file" accept="image/*" id="file-input" hidden>
         </div>
         <img class="preview" id="file-preview" alt="" hidden>
@@ -302,7 +302,7 @@
 
       <div class="ag-card">
         <h2 class="ag-card-title">Navigation</h2>
-        <p class="ag-card-sub">Pages slide in natively. Back first closes the in-page panel (<code>AntiGem.onBack</code>).</p>
+        <p class="ag-card-sub">Pages slide in natively. Back first closes the in-page panel (<code>Hina.onBack</code>).</p>
         <div class="ag-row">
           <button class="ag-btn" id="nav-push">Open detail page</button>
           <button class="ag-btn ag-btn-tonal" id="panel-open">Open in-page panel</button>
@@ -329,7 +329,7 @@
           <span class="card-icon">🧵</span>
           <div class="ag-grow">
             <h2 class="ag-card-title">Threads</h2>
-            <p class="ag-card-sub">AntiGem.thread runs a function on other CPU cores. Each thread has native fetch, IndexedDB and files too.</p>
+            <p class="ag-card-sub">Hina.thread runs a function on other CPU cores. Each thread has native fetch, IndexedDB and files too.</p>
           </div>
         </div>
         <div class="ag-row">
@@ -408,7 +408,7 @@
           <h2 class="ag-card-title ag-grow" style="margin:0">Theme</h2>
           <span class="ag-badge ag-badge-primary" id="theme-mode">light</span>
         </div>
-        <p class="ag-card-sub">Live AntiGem theme colors, as <code>--ag-*</code> CSS variables. Change the theme in AntiGem and watch this update.</p>
+        <p class="ag-card-sub">Live Agent Hina theme colors, as <code>--ag-*</code> CSS variables. Change the theme in Agent Hina and watch this update.</p>
         <div class="swatches" id="swatches"></div>
       </div>
 
@@ -430,7 +430,7 @@
 
       <div class="ag-card">
         <h2 class="ag-card-title">MCP tools</h2>
-        <p class="ag-card-sub">AntiGem's own tools, here <code>notes_mcp</code> (permission <code>mcp:notes_mcp</code>).</p>
+        <p class="ag-card-sub">Agent Hina's own tools, here <code>notes_mcp</code> (permission <code>mcp:notes_mcp</code>).</p>
         <button class="ag-btn ag-btn-tonal" id="mcp-list">List notes_mcp tools</button>
         <pre class="out" id="mcp-out" hidden></pre>
       </div>
@@ -466,11 +466,11 @@
   </nav>
 </div>
 
-<!-- In-page panel: closed by the back gesture through AntiGem.onBack -->
+<!-- In-page panel: closed by the back gesture through Hina.onBack -->
 <div class="ag-scrim" id="scrim"></div>
 <div class="ag-sheet" id="panel" role="dialog" aria-label="In-page panel">
   <h2 class="ag-title" style="margin-bottom:8px">In-page panel</h2>
-  <p class="ag-muted" style="margin:0 0 16px">This sheet is plain HTML. Press back (or swipe) and <code>AntiGem.onBack</code> closes it instead of leaving the app.</p>
+  <p class="ag-muted" style="margin:0 0 16px">This sheet is plain HTML. Press back (or swipe) and <code>Hina.onBack</code> closes it instead of leaving the app.</p>
   <ul class="ag-list">
     <li class="ag-item"><span class="ag-avatar">A</span><span class="ag-item-body"><span class="ag-item-title">Custom styled</span><span class="ag-item-sub">Built with the UI kit</span></span></li>
     <li class="ag-item"><span class="ag-avatar">B</span><span class="ag-item-body"><span class="ag-item-title">Back-aware</span><span class="ag-item-sub">onBack returns true while open</span></span></li>
